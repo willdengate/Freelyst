@@ -1,0 +1,20 @@
+{
+  "name": "SavedListing",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string"
+    },
+    "listing_id": {
+      "type": "string"
+    },
+    "saved_price": {
+      "type": "number",
+      "description": "Price at the time the listing was saved, used for price drop detection"
+    }
+  },
+  "required": [
+    "user_email",
+    "listing_id"
+  ]
+}

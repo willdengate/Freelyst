@@ -1,0 +1,42 @@
+{
+  "name": "ListingShare",
+  "type": "object",
+  "properties": {
+    "sender_email": {
+      "type": "string"
+    },
+    "sender_name": {
+      "type": "string"
+    },
+    "receiver_email": {
+      "type": "string"
+    },
+    "listing_id": {
+      "type": "string"
+    },
+    "listing_title": {
+      "type": "string"
+    },
+    "listing_price": {
+      "type": "number"
+    },
+    "listing_currency": {
+      "type": "string"
+    },
+    "listing_image": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "read": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "sender_email",
+    "receiver_email",
+    "listing_id"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "UserInterest",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "search",
+        "view",
+        "save",
+        "category_browse"
+      ]
+    },
+    "keyword": {
+      "type": "string",
+      "description": "Search term or listing title"
+    },
+    "category": {
+      "type": "string"
+    },
+    "listing_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "user_email",
+    "type"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Rating",
+  "type": "object",
+  "properties": {
+    "rater_email": {
+      "type": "string"
+    },
+    "rated_email": {
+      "type": "string"
+    },
+    "role": {
+      "type": "string",
+      "enum": [
+        "seller",
+        "buyer"
+      ],
+      "description": "Role of the person being rated"
+    },
+    "score": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "listing_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "rater_email",
+    "rated_email",
+    "role",
+    "score"
+  ]
+}

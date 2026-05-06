@@ -1,0 +1,94 @@
+{
+  "name": "Listing",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Listing title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description"
+    },
+    "price": {
+      "type": "number",
+      "description": "Price in the chosen currency"
+    },
+    "currency": {
+      "type": "string",
+      "description": "Currency code e.g. USD, EUR",
+      "default": "USD"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Electronics",
+        "Vehicles",
+        "Furniture",
+        "Clothing",
+        "Home & Garden",
+        "Sports",
+        "Toys",
+        "Books",
+        "Music",
+        "Pet Supplies",
+        "Other"
+      ]
+    },
+    "condition": {
+      "type": "string",
+      "enum": [
+        "New",
+        "Like New",
+        "Good",
+        "Fair",
+        "Poor"
+      ]
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of image URLs"
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    },
+    "location_name": {
+      "type": "string",
+      "description": "City or neighborhood name"
+    },
+    "seller_name": {
+      "type": "string"
+    },
+    "seller_email": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "sold",
+        "pending",
+        "removed"
+      ],
+      "default": "active"
+    },
+    "views_count": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "title",
+    "price",
+    "category",
+    "condition",
+    "seller_email",
+    "seller_name"
+  ]
+}
